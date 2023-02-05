@@ -80,6 +80,7 @@ $(document).ready(function(){
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
     $('form').submit(function(e) {
+        e.preventDefault()
         $.ajax({
 //             type: "POST",
 //             url: "mailer/smart.php",
@@ -91,7 +92,7 @@ $(document).ready(function(){
             
             $('form').trigger('reset');
         });
-//         return false;
+        return false;
     });
 
     // Smooth scroll and pageup
